@@ -1,0 +1,140 @@
+# DO NOT CHANGE OR REMOVE THIS COMMENT, and do not change this import otherwise all tests will fail.
+# Use randint to generate random cards. 
+from random import randint
+
+# Write all of your part 2B code below this comment. DO NOT CHANGE OR REMOVE THIS COMMENT.
+#copied code from 2A
+
+card_rank=randint(1,13)
+if card_rank == 1:
+  # A 1 stands for an ace.
+  card_name = "Ace"
+elif card_rank == 11:
+  # An 11 stands for a jack.
+  card_name = "Jack"
+elif card_rank == 12:
+  # A 12 stands for a queen.
+  card_name = "Queen"
+elif card_rank == 13:
+  # A 13 stands for a king.
+  card_name = "King"
+else:
+  # All other cards are named by their
+  # number, or rank.
+  card_name = str(card_rank)
+if card_rank == 1 or card_rank == 8:
+  drew_prefix = 'Drew an '
+else:
+  drew_prefix = 'Drew a '
+print(drew_prefix+card_name)
+if card_rank == 11 or card_rank == 12 or card_rank == 13:
+  # Jacks, Queens, and Kings are worth 10.
+  card_value = 10
+elif card_rank == 1:
+  # Aces are worth 11.
+  card_value = 11
+else:
+  # All other cards are worth the same as
+  # their rank.
+  card_value = card_rank
+
+hand=card_value
+
+
+card_rank2=randint(1,13)
+if card_rank2 == 1: 
+  # A 1 stands for an ace.
+  card_name2 = "Ace"
+elif card_rank2 == 11:
+ # An 11 stands for a jack.
+  card_name2 = "Jack"
+elif card_rank2 == 12:
+ # A 12 stands for a queen.
+ card_name2 = "Queen"
+elif card_rank2 == 13:
+  # A 13 stands for a king.
+  card_name2 = "King"
+else:
+ # All other cards are named by their
+ # number, or rank.
+ card_name2 = str(card_rank2)
+if card_rank2 == 1 or card_rank2 == 8:
+  drew_prefix = 'Drew an '
+else:
+  drew_prefix = 'Drew a '
+print(drew_prefix+card_name2)
+if card_rank2 == 11 or card_rank2 == 12 or card_rank2 == 13:
+   # Jacks, Queens, and Kings are worth 10.
+   card_value2 = 10
+elif card_rank2 == 1:
+    # Aces are worth 11.
+    card_value2 = 11
+else:
+    # All other cards are worth the same as
+    # their rank.
+    card_value2 = card_rank2
+hand= hand+card_value2
+
+if hand<21:
+ qns=input("You have "+str(hand)+". Hit (y/n)? ")
+ while qns!="y" and qns!="n":
+  print("Sorry I didn't get that.")
+  qns=input("You have "+str(hand)+". Hit (y/n)? ")
+ while qns=="y":
+  
+  #adding the next card
+  card_rank3 =randint(1,13)
+  if card_rank3 == 1: 
+   # A 1 stands for an ace.
+   card_name3 = "Ace"
+  elif card_rank3 == 11:
+   # An 11 stands for a jack.
+   card_name3 = "Jack"
+  elif card_rank3 == 12:
+   # A 12 stands for a queen.
+   card_name3 = "Queen"
+  elif card_rank3 == 13:
+   # A 13 stands for a king.
+   card_name3 = "King"
+  else:
+   # All other cards are named by their
+   # number, or rank.
+   card_name3 = str(card_rank3)
+  if card_rank3 == 1 or card_rank3 == 8:
+   drew_prefix = 'Drew an '
+  else:
+   drew_prefix = 'Drew a '
+  print(drew_prefix+card_name3)
+  if card_rank3 == 11 or card_rank3 == 12 or card_rank3 == 13:
+   # Jacks, Queens, and Kings are worth 10.
+   card_value3 = 10
+  elif card_rank3 == 1:
+   # Aces are worth 11.
+   card_value3 = 11
+  else:
+   # All other cards are worth the same as
+   # their rank.
+   card_value3 = card_rank3
+  hand= hand+card_value3
+  #following part is to close or still run while loop
+  if hand>=21:
+    qns="n"
+  elif hand<21:
+    qns=input("You have "+str(hand)+". Hit (y/n)? ")
+    while qns!="y" and qns!="n":
+     print("Sorry I didn't get that.")
+     qns=input("You have "+str(hand)+". Hit (y/n)? ")
+ if qns=="n" and hand<21:
+  print("Final hand: "+str(hand)+".")
+ 
+if hand == 21:
+  print("Final hand: "+str(hand)+".")
+  print('BLACKJACK!')
+elif hand > 21 :
+  print("Final hand: "+str(hand)+".")
+  print('BUST.')
+
+
+
+
+
