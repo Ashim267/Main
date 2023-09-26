@@ -1,0 +1,6 @@
+wrd=input()
+c=''
+for a in wrd :
+    b=a+'.'
+    c=c+b
+print(c)
