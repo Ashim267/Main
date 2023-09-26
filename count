@@ -1,0 +1,7 @@
+wrd=input()
+c=input()
+count=0
+for a in wrd :
+    if a == c :
+        count=count+1
+print(count)
