@@ -1,0 +1,11 @@
+prompt=input()
+x=int(input())
+a=0
+b=x
+print(prompt[a:x])
+while x<len(prompt):
+ a=x
+ x=x+b
+ if x>len(prompt):
+    x=len(prompt)
+ print(prompt[a:x])
