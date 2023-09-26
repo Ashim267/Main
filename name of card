@@ -1,0 +1,16 @@
+name=input()
+if name=="1":
+    print("Drew an Ace")
+elif int(name)>=2 and int(name) <=10:
+    if name=="8":
+        print("Drew an "+name)
+    else:
+        print("Drew a "+name)
+elif name=="11":
+    print("Drew a Jack")
+elif name=="12":
+    print("Drew a Queen")
+elif name=="13":
+    print("Drew a King") 
+else:
+    print("BAD CARD")
