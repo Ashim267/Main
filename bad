@@ -1,0 +1,10 @@
+name=input("")
+name=int(name)
+if name==1:
+    print("Your hand value is 11.")
+elif name>=2 and name<=10 :
+    print("Your hand value is "+str(name)+".")
+elif name>=11 and name<=13 :
+    print("Your hand value is 10.")
+else:
+    print("BAD CARD")
