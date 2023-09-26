@@ -1,0 +1,10 @@
+name=input("")
+name=int(name)  
+if name<4:
+    print("BAD HAND VALUE!")  
+elif name>31:
+    print("BAD HAND VALUE!")
+elif name==21:
+    print("BLACKJACK!")    
+elif name>21 and name<=31:
+    print("BUST.")
